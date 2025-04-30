@@ -1,11 +1,12 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="nutrient-analysis",
+    name="nutrient_analysis",
     version="0.0.1",
     packages=find_packages(where="src"),
     package_dir={"": "src"},
     install_requires=[
+        "click",
         "requests",
         "beautifulsoup4",
         "psycopg2-binary",
@@ -18,8 +19,7 @@ setup(
     },
     entry_points={
         "console_scripts": [
-            "nutrient-main=nutrient-analysis.main:cli"
+            "nutrient-main=nutrient_analysis.main:cli"
         ]
     },
-    setup_requires=['flake8']
 )
